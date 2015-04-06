@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    RED.nodes.registerType('huelights',{
+        category: 'output',
+        color: '#a6bbcf',
+        defaults: {
+        	name: {value:""},
+		user: {value:""},
+		bridge:{value:""},
+		device:{value:""}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "hue.png",
+        label: function() {
+            return this.name||"Hue";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="huelights">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row node-input-bridge">
+         <label for="node-input-bridge"><i class="fa fa-bridge"></i> Bridge</label>
+         <input type="text" id="node-input-bridge" placeholder="Bridge">
+</div>
+    <div class="form-row node-input-user">
+         <label for="node-input-user"><i class="fa fa-user"></i> User</label>
+         <input type="text" id="node-input-user" placeholder="User">
+</div>
+    <div class="form-row node-input-device">
+         <label for="node-input-device"><i class="fa fa-device"></i> Device</label>
+         <input type="text" id="node-input-device" placeholder="Device">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="huelights">
+    <p>A node that controls hue lamps</p>
+</script>
+
+
